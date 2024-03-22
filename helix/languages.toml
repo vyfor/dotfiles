@@ -1,0 +1,11 @@
+[[language]]
+name = "kotlin"
+file-types = ["kt", "kts"]
+root = ["build.gradle.kts", "build.gradle"]
+comment-token = "//"
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "kotlin-language-server" ]
+
+[[grammar]]
+name = "kotlin"
+source = { git = "https://github.com/fwcd/tree-sitter-kotlin", rev = "0ef87892401bb01c84b40916e1f150197bc134b1" }

@@ -14,6 +14,9 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup('axeon.plugins', {
   defaults = { lazy = true },
   lockfile = vim.fn.stdpath('data') .. '/lazy-lock.json',
+  git = {
+    timeout = 300,
+  },
   performance = {
     cache = {
       enabled = true,

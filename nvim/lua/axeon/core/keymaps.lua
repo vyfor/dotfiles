@@ -48,7 +48,7 @@ local keymaps = {
     ['<C-s>'] = {
       '<C-w>s', desc = 'Split window horizontally',
     },
-    ['<C-v>'] = {
+    ['<C-S>'] = {
       '<C-w>v', desc = 'Split window vertically',
     },
     ['C-w'] = {

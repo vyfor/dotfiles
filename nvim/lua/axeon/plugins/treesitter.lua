@@ -6,7 +6,7 @@ return {
     local configs = require('nvim-treesitter.configs')
 
     configs.setup({
-      ensure_installed = { "kotlin", "java", "rust", "lua", "javascript", "html", "css" },
+      ensure_installed = { "kotlin", "java", "rust", "lua", "javascript", "html", "css", "c" },
       sync_install = false,
       highlight = {
         enable = true,

@@ -1,4 +1,4 @@
 return {
   'justinmk/vim-dirvish',
-  lazy = false
+  event = 'BufEnter',
 }

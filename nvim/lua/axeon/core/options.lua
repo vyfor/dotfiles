@@ -61,3 +61,24 @@ end
 for k, v in pairs(opts) do
 	vim.opt[k] = v
 end
+
+-- Custom formatter function for virtual text
+local function format_diagnostic(diagnostic)
+ -- Prepend a newline character to the diagnostic message
+ return "\n" .. diagnostic.message
+end
+
+  
+-- Configure diagnostic display
+vim.diagnostic.config({
+ virtual_text = {
+    spacing = 2, -- Adjust spacing between virtual text and the line
+    prefix = "\n", -- Optional: Set a prefix for the virtual text
+    source = "always", -- Always show virtual text
+ },
+ signs = true, -- Show signs for diagnostics
+ underline = true, -- Underline diagnostics
+ update_in_insert = false, -- Do not update diagnostics in insert mode
+ -- Use the custom formatter function for virtual text
+})
+

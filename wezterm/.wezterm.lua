@@ -1,7 +1,16 @@
 local wezterm = require('wezterm')
 
 return {
-  front_end = 'OpenGL',
+  webgpu_preferred_adapter = {
+    backend = 'Vulkan',
+    device = 26591,
+    device_type = "DiscreteGpu",
+    driver = "AMD proprietary driver",
+    driver_info = "22.20.27.09",
+    name = "Radeon RX 580 Series",
+    vendor = 4098,
+  },
+  front_end = 'WebGpu',
   webgpu_power_preference = 'HighPerformance',
 
   font = wezterm.font 'FantasqueSansMono Nerd Font',

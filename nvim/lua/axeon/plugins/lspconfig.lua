@@ -36,27 +36,16 @@ local function configure_servers(lsp)
   -- }
 
   -- Kotlin
-  lsp.kotlin_language_server.setup {}
+  -- lsp.kotlin_language_server.setup {}
 
   -- C
-  lsp.clangd.setup {}
+  -- lsp.clangd.setup {}
 end
 
 function M.config()
   local lsp = require('lspconfig')
 
   configure_servers(lsp)
-
-  vim.api.nvim_create_autocmd('LspAttach', {
-    callback = function(args)
-      local bufnr = args.buf
-      local client = vim.lsp.get_client_by_id(args.data.client_id)
-
-      if client.supports_method('textDocument/inlayHint') then
-        vim.lsp.inlay_hint.enable(bufnr, true)
-      end
-    end
-  })
 end
 
 return M

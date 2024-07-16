@@ -7,7 +7,7 @@ local keymaps = {
       '<C-u>zz', desc = 'Move half screen up and center view',
     },
     ['<leader>e'] = {
-      ':Dirvish<CR>', desc = 'Open Dirvish directory browser',
+      ':Oil<CR>', desc = 'Open Oil file browser',
     },
     ['<leader>ff'] = {
       ':Telescope find_files<CR>', desc = 'Find files using Telescope',
@@ -51,8 +51,11 @@ local keymaps = {
     ['<C-S>'] = {
       '<C-w>v', desc = 'Split window vertically',
     },
-    ['C-w'] = {
+    ['<leader>wc'] = {
       '<C-w>c', desc = 'Close window',
+    },
+    ['<leader>wr'] = {
+      '<C-w>r', desc = 'Rearrange windows',
     },
     ['<leader>v'] = {
       '"*', desc = 'Select system clipboard register',
@@ -92,7 +95,7 @@ local keymaps = {
     },
   }
 }
-  
+
 for mode, mappings in pairs(keymaps) do
   for key, mapping in pairs(mappings) do
     local opts = mapping.opts or { noremap = true, silent = true }

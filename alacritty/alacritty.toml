@@ -1,4 +1,4 @@
-shell = "C:/Program Files/nu/bin/nu.exe"
+shell = "D:\\scoop\\apps\\nu\\current\\nu.exe"
 
 [env]
 TERM = "xterm-256color"
